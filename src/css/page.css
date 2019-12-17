@@ -1,0 +1,35 @@
+.image-parent {
+    display: flex !important;
+}
+
+.slides {
+  position: relative;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.slides .slick-prev {
+  left: 5%;
+}
+
+.slides .slick-next {
+  right: 5%;
+}
+
+.slick-slide img {
+    min-width: calc(100% - 100px);
+    margin: 0 50px;
+}
+
+.slick-next:before {
+    font-size: 30px !important;
+}
+
+.slick-prev:before {
+    font-size: 30px !important;
+}
