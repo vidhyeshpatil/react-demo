@@ -1,3 +1,4 @@
+/* caroulel css */
 .image-parent {
     display: flex !important;
 }
@@ -32,4 +33,62 @@
 
 .slick-prev:before {
     font-size: 30px !important;
+}
+/*******************************************/
+
+/* card view css */
+
+.card-view-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    margin: 50px; /* remove this when you seprate the card view component */
+}
+
+.card-view-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-image {
+    background: #8BC34A;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 0px 10px 10px;
+}
+
+.card-info p, .card-details {
+    margin: 10px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.caption {
+    font-size: 15px;
+    color: #847777;
+}
+
+.card-info-link {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px;
+    color: #02ab9b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-select-btn {
+    font-weight: bold;
+    margin: 10px;
+    padding: 15px;
+    background: #02ab9b;
+    border-radius: 5px;
+    border: 1px solid #02ab9b;
+    color: #fff;
+    letter-spacing: 1px;
 }

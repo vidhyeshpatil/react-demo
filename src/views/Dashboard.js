@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
+import CardView from '../components/CardView';
 import { BASE_IMAGE_PATH } from '../utils/config';
 
 export default class Dashboard extends React.Component {
@@ -16,14 +17,14 @@ export default class Dashboard extends React.Component {
           imgAltText: "Morning"
       },
       {
-          imgSrc: `${BASE_IMAGE_PATH}/3.jpeg`,
-          imgName: "Autumn",
-          imgAltText: "Autumn"
-      },
-      {
           imgSrc: `${BASE_IMAGE_PATH}/4.jpeg`,
           imgName: "Sky",
           imgAltText: "Sky"
+      },
+      {
+          imgSrc: `${BASE_IMAGE_PATH}/3.jpeg`,
+          imgName: "Autumn",
+          imgAltText: "Autumn"
       }
     ],
   }
@@ -34,7 +35,6 @@ export default class Dashboard extends React.Component {
       infinite: true,
       arrows: true,
       speed: 500,
-      initialSlide: 0,
       slidesToShow: 1,
       slidesToScroll: 1,
       className: "slides",
@@ -42,9 +42,8 @@ export default class Dashboard extends React.Component {
 
     return (
       <React.Fragment>
-        <div className = "image-container">
-          <Carousel settings = {settings} sliderImages = {this.state.sliderImages} />
-        </div>
+        <Carousel settings = {settings} sliderImages = {this.state.sliderImages} />
+        <CardView />
       </React.Fragment>
     );
   }

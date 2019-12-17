@@ -6,15 +6,17 @@ export default class Carousel extends React.Component {
         const { settings, sliderImages } = this.props;
 
         return (
-            <Slider {...settings} >
-                <div className = "slick-prev" />
-                <div className = "slick-next" />
-                <div className = "image-parent">
-                {sliderImages.map((item, i) => (
-                    <img key = {`${item.name}_${i}`} src = {item.imgSrc} alt = {item.imgAltText} />
-                ))}
-                </div>
-            </Slider>
+            <div className = "image-view-container">
+                <Slider {...settings} >
+                    <div className = "slick-prev" />
+                    <div className = "slick-next" />
+                    <div className = "image-parent">
+                        {sliderImages.map((item, i) => (
+                            <img key = {i} src = {item.imgSrc} alt = {item.imgAltText} />
+                        ))}
+                    </div>
+                </Slider>
+            </div>
         );
     }
 }
